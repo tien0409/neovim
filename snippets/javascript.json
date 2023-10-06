@@ -1,0 +1,53 @@
+{
+  "try-catch": {
+    "prefix": ["tc"],
+    "body": [
+      "try {",
+      "  $1",
+      "} catch(err) {",
+      "  console.log('err', err);",
+      "  $2",
+      "}"
+    ],
+    "description": "Try catch block"
+  },
+  "objectToDestruct": {
+    "prefix": ["otd"],
+    "body": "const { ${2:prop} } = ${1: objectToDestruct}"
+  },
+  "clg": {
+    "prefix": ["clg"],
+    "body": "console.log(\"$1\")",
+    "description": "Console log string"
+  },
+  "clv": {
+    "prefix": ["clv"],
+    "body": "console.log(\"$1\", $1)",
+    "description": "Console log with variable"
+  },
+  "ipd": {
+    "prefix": ["ipd"],
+    "body": "import { $2 } from \"$1\"",
+    "description": "Import destructoring"
+  },
+  "ipc": {
+    "prefix": ["ipc"],
+    "body": "import ${2:moduleName} from \"${1:module}\"",
+    "description": "Import component"
+  },
+  "req": {
+    "prefix": ["req"],
+    "body": "const $2 = require(\"$1\")",
+    "description": "Import es5"
+  },
+  "me": {
+    "prefix": ["me"],
+    "body": "module.exports = $1",
+    "description": "Export es5"
+  },
+  "ed": {
+    "prefix": ["ed"],
+    "body": "export default $1",
+    "description": "Export default"
+  }
+}
